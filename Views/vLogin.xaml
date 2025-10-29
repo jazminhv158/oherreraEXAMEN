@@ -3,20 +3,53 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="oherreraEXAMEN.Views.vLogin"
              Title="vLogin">
+    <ScrollView>
     <VerticalStackLayout>
-        <<Label 
-     Text="SEMANA 3"
-     TextColor="DarkBlue"
-     VerticalOptions="Center" 
-     HorizontalOptions="Center" />
+        
+        
+        <Label      
+            Text="CURSOS ONLINE"
+            FontSize="20"     
+            TextColor="Red"     
+            VerticalOptions="Center"      
+            HorizontalOptions="Center" />
 
             <!--IMAGEN INCIO-->
 
-            <Image
-     Source="logo.png"
-     WidthRequest="300">
+            <Image     
+                Source="uisrael.jpg"     
+                WidthRequest="300">
 
             </Image>
+
+
+            <!--GRID-->
+
+            <Grid RowSpacing="20">
+                <!--FILAS-->
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+
+                </Grid.RowDefinitions>
+
+                <!--COLUMNAS-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+
+                </Grid.ColumnDefinitions>
+
+                <!--ETIQUETAS-->
+
+                <Label Text="Estudiante" Grid.Row="0" Grid.Column="0" FontAttributes="Bold" FontSize="20"/>
+                <Label Text="Seguimiento 1" Grid.Row="1" Grid.Column="0" FontAttributes="Bold" FontSize="15"/>
+
+                </Grid>
+
+
+
 
             <Label
      Text="Sistema de calificaciones Universidad Israel"
@@ -69,4 +102,5 @@
 
             </Button>
     </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

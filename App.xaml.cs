@@ -11,7 +11,7 @@
         {
             //return new Window(new AppShell());
             /*navigationPage PARA NAVEGAR ENTRE PAGINAS*/
-            return new Window(new NavigationPage(new Views.vUno()));
+            return new Window(new NavigationPage(new View.vRegistro()));
         }
     }
 }
