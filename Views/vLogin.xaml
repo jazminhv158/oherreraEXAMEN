@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<!--<?xml version="1.0" encoding="utf-8" ?>-->
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="oherreraEXAMEN.Views.vLogin"
@@ -22,13 +22,20 @@
 
             </Image>
 
+            <Label
+                Text="Datos de inicio"
+                FontSize="15"
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+                
+            </Label>
+
 
             <!--GRID-->
 
             <Grid RowSpacing="20">
                 <!--FILAS-->
                 <Grid.RowDefinitions>
-                    <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
 
@@ -43,64 +50,59 @@
 
                 <!--ETIQUETAS-->
 
-                <Label Text="Estudiante" Grid.Row="0" Grid.Column="0" FontAttributes="Bold" FontSize="20"/>
-                <Label Text="Seguimiento 1" Grid.Row="1" Grid.Column="0" FontAttributes="Bold" FontSize="15"/>
+                <Label 
+                    Text="Usuario"                        
+                    Grid.Row="0" 
+                    Grid.Column="0" 
+                    FontAttributes="Bold" 
+                    FontSize="20"/>
 
-                </Grid>
+                <Label 
+                    Text="COntraseña" 
+                    Grid.Row="1" 
+                    Grid.Column="0" 
+                    FontAttributes="Bold" 
+                    FontSize="20"/>
 
 
 
+                <StackLayout 
+                    Grid.Row="0"             
+                    Grid.Column="1">
+                    
+                    <Entry 
+                        x:Name="txtUsuario" 
+                        Placeholder="Ingrese Nombre">
 
-            <Label
-     Text="Sistema de calificaciones Universidad Israel"
-     VerticalOptions="Center"
-     HorizontalOptions="Center"
-     TextColor="DarkBlue"
-     FontSize="20">
+                    </Entry>
 
-            </Label>
-            <Label
-     Text="Iniciar Sesión"
-     VerticalOptions="Fill"
-     HorizontalOptions="Fill"
-     FontSize="12"
-     TextColor="DarkBlue">
+                </StackLayout>
+                
+                <StackLayout     
+                    Grid.Row="1"    
+                    Grid.Column="1">
 
-            </Label>
-            <Label
-     Text="Por favor ingresa tu usuario y Contraseña."
-     VerticalOptions="Fill"
-     HorizontalOptions="Fill"
-     FontSize="12"
-     TextColor="DarkBlue">
+                    <Entry         
+                        x:Name="txtContrasena"                         
+                        IsPassword="True"
+                        Placeholder="Ingrese contraseña">
 
-            </Label>
+                    </Entry>
 
-            <!--INGRESAR DATOS DE LOS USUARIOS-->
-            <Entry
-     x:Name="txtUsuario"
-     Placeholder="Ingresar Usuario"
-     Keyboard="Text"
-     TextColor="Gray"
-     PlaceholderColor="Gray">
+                </StackLayout>
+                
+             
+            </Grid>
 
-            </Entry>
-            <Entry
-     x:Name="txtContrasena"
-     Placeholder="Ingrese la contraseña"
-     IsPassword="True"
-     TextColor="Gray"
-     PlaceholderColor="Gray">
-
-            </Entry>
             <Button
-     x:Name="btnIngresar"
-     Text="Ingresar"
-     BackgroundColor="Blue"
-     TextColor="White"
-     Clicked="btnIngresar_Clicked">
-
+                x:Name="btnIngresar"
+                Text="Ingresar"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Clicked="btnIngresar_Clicked_1">
+                
             </Button>
+
     </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

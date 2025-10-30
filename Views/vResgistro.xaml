@@ -2,11 +2,171 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="oherreraEXAMEN.Views.vResgistro"
-             Title="vResgistro">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Registro">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20">
+
+            <Label    
+                x:Name="lblSaludo"    
+                Text="Bienvenido"    
+                FontSize="20"    
+                HorizontalOptions="Center"    
+                TextColor="DarkBlue" />
+
+            <Label       
+                x:Name="lblMenuRegistro"      
+                Text="Menú de Registro"       
+                FontSize="20"        
+                HorizontalOptions="Center"     
+                TextColor="DarkBlue" />
+
+            <Grid RowSpacing="20" ColumnSpacing="10" Margin="10">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <!-- 0 -->
+                    <RowDefinition Height="Auto"/>
+                    <!-- 1 -->
+                    <RowDefinition Height="Auto"/>
+                    <!-- 2 -->
+                    <RowDefinition Height="Auto"/>
+                    <!-- 3 -->
+                    <RowDefinition Height="Auto"/>
+                    <!-- 4 -->
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <!-- 0 -->
+                    <ColumnDefinition Width="*"/>
+                    <!-- 1 -->
+                </Grid.ColumnDefinitions>
+
+        
+                <Label Text="Fecha" Grid.Row="0" Grid.Column="0" FontAttributes="Bold" FontSize="20" />
+                <Label Text="Ciudad" Grid.Row="1" Grid.Column="0" FontAttributes="Bold" FontSize="20" />
+                <Label Text="País" Grid.Row="2" Grid.Column="0" FontAttributes="Bold" FontSize="20" />
+                <Label Text="Monto Inicial" Grid.Row="3" Grid.Column="0" FontAttributes="Bold" FontSize="20" />
+
+    
+                <DatePicker 
+                    x:Name="dtFecha" 
+                    Grid.Row="0" 
+                    Grid.Column="1" 
+                    Format="dd/MM/yyyy" />
+
+                <Entry
+                    x:Name="txtCiudad"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Placeholder="Ingrese Ciudad" />
+
+                <Entry
+                    x:Name="txtPais"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Placeholder="Ingrese País" />
+
+                <Entry
+                    x:Name="txtPagoInicial"
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    FontSize="20"
+                    TextColor="Green"
+                    Placeholder="Ingrese monto inicial" />
+
+           
+                <Button
+                    x:Name="btnCalcular"
+                    Text="Calcular"
+                    Grid.Row="4"
+                    Grid.ColumnSpan="2"
+                    BackgroundColor="#003366"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Clicked="btnCalcular_Clicked" />
+
+                <Label 
+                    x:Name="lblResultado"
+                    TextColor="DarkGreen"
+                    FontSize="18"
+                    Margin="10,10,10,0"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" /> 
+            </Grid>
+
+
+
+   
+            <Grid RowSpacing="10" ColumnSpacing="15" Margin="10">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+  
+                    <RowDefinition Height="Auto"/>
+    
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <!-- 0 -->
+                    <ColumnDefinition Width="*"/>
+                    <!-- 1 -->
+                    <ColumnDefinition Width="*"/>
+                    <!-- 2 -->
+                </Grid.ColumnDefinitions>
+
+                <Label 
+                    Text="Nombre" 
+                    Grid.Row="0" Grid.Column="0" 
+                    FontAttributes="Bold" FontSize="18" 
+                    HorizontalOptions="Center" />
+
+                <Label 
+                    Text="Apellido" 
+                    Grid.Row="0" Grid.Column="1" 
+                    FontAttributes="Bold" FontSize="18" 
+                    HorizontalOptions="Center" />
+
+                <Label 
+                    Text="Edad" 
+                    Grid.Row="0" Grid.Column="2" 
+                    FontAttributes="Bold" FontSize="18" 
+                    HorizontalOptions="Center" />
+
+                <Entry 
+                    x:Name="txtNombre"
+                    Grid.Row="1" Grid.Column="0" 
+                    Placeholder="Ingresar Nombre"
+                    HorizontalOptions="Fill" />
+
+                <Entry 
+                    x:Name="txtApellido"
+                    Grid.Row="1" Grid.Column="1" 
+                    Placeholder="Ingresar Apellido"
+                    HorizontalOptions="Fill" />
+
+                <Entry 
+                    x:Name="txtEdad"
+                    Grid.Row="1" Grid.Column="2" 
+                    Placeholder="Ingresar Edad"
+                    Keyboard="Numeric"
+                    HorizontalOptions="Fill" />
+            </Grid>
+
+           
+            <Button
+                x:Name="btnEnviar"
+                Text="Enviar"
+                BackgroundColor="#003366"
+                TextColor="White"
+                FontAttributes="Bold"
+                Margin="0,20,0,0"
+                Clicked="btnEnviar_Clicked"
+                HorizontalOptions="Center"
+                WidthRequest="200" />
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
